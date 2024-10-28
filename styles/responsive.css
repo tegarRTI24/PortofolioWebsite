@@ -1,0 +1,134 @@
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar dengan lebar maksimum 1000px */
+@media screen and (max-width: 1000px) {
+    p {
+        font-size: 0.9rem; /* Mengubah ukuran font untuk elemen paragraf */
+        line-height: 1.8rem; /* Mengatur tinggi baris */
+    }
+
+    .grid-3 {
+        gap: 1rem; /* Mengatur jarak antara item grid */
+    }
+
+    .skills-right ul li {
+        font-size: 0.9rem; /* Mengubah ukuran font untuk item daftar */
+    }
+}
+
+/* Untuk layar dengan lebar maksimum 825px */
+@media screen and (max-width: 825px) {
+    /* Burger Menu */
+    .burger {
+        display: block; /* Menampilkan burger menu */
+        cursor: pointer; /* Mengubah kursor saat hover */
+        position: absolute; /* Mengatur posisi absolut */
+        right: 20px; /* Mengatur posisi ke kanan */
+        top: 20px; /* Atur jarak dari atas navbar */
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px); /* Rotasi dan translasi untuk garis pertama */
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0; /* Menyembunyikan garis kedua */
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, -7px); /* Rotasi dan translasi untuk garis ketiga */
+    }
+
+    body {
+        padding-top: 200px; /* Menyisakan ruang untuk navbar */
+    }
+
+    /* Navigasi */
+    nav {
+        position: fixed; /* Memperbaiki posisi navigasi */
+        width: 50%; /* Lebar navigasi */
+        right: 0; /* Mengatur posisi ke kanan */
+        top: 0; /* Mengatur posisi ke atas */
+        height: 100vh; /* Tinggi penuh layar */
+        flex-direction: column; /* Mengatur arah flex ke kolom */
+        background: var(--primaryBackgroundColor); /* Warna latar belakang */
+        border-left: 1px solid var(--borderColor); /* Garis batas di sebelah kiri */
+        z-index: 9; /* Menetapkan z-index */
+        transform: translateX(100%); /* Menggeser navigasi keluar dari layar */
+        transition: transform 0.3s ease-in-out; /* Transisi saat menggeser navigasi */
+    }
+
+    nav ul {
+        height: 100vh; /* Tinggi penuh untuk daftar navigasi */
+        align-items: center; /* Menyelaraskan item secara vertikal */
+        flex-direction: column; /* Mengatur arah flex ke kolom */
+        justify-content: center; /* Menyelaraskan item secara horizontal */
+    }
+
+    .nav-active {
+        transform: translateX(0); /* Mengembalikan navigasi ke posisi asli */
+    }
+
+    :root {
+        --sectionPadding: 4rem 0; /* Mengatur padding untuk bagian */
+    }
+
+    .section-title {
+        font-size: 1.6rem; /* Ukuran font untuk judul bagian */
+        margin: 0.6rem 0 2.5rem; /* Margin untuk judul bagian */
+    }
+
+    .pre-title {
+        font-size: 0.8rem; /* Ukuran font untuk sub-judul */
+    }
+
+    /* Hero Section */
+    #hero {
+        grid-template-columns: 1fr; /* Mengatur kolom grid untuk hero */
+        height: fit-content; /* Mengatur tinggi sesuai konten */
+    }
+
+    .hero-right {
+        order: -1; /* Mengubah urutan elemen */
+    }
+
+    .hero-right img {
+        width: 40%; /* Lebar gambar */
+    }
+
+    .hero-left {
+        text-align: center; /* Menyelaraskan teks ke tengah */
+        padding-bottom: 5rem; /* Padding bawah untuk hero */
+    }
+
+    .hero-left .pre-title {
+        margin: 1rem auto; /* Margin untuk sub-judul di hero */
+    }
+
+    .hero-name {
+        font-size: 2.3rem; /* Ukuran font untuk nama di hero */
+        margin-bottom: 0.5rem; /* Margin bawah untuk nama */
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        gap: 1rem; /* Jarak antara item di section skills */
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 2rem 0; /* Padding untuk footer */
+    }
+}
+
+/* Untuk layar dengan lebar maksimum 640px */
+@media screen and (max-width: 640px) {
+    /* Judul */
+    .section-title {
+        font-size: 1.3rem; /* Ukuran font untuk judul bagian */
+    }
+
+    .pre-title {
+        font-size: 0.7rem; /* Ukuran font untuk sub-judul */
+    }
+}
